@@ -9,7 +9,7 @@ window.onload = () => {
   */
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('.//sw.js', {scope: 'sw-test'}).then(function(registration) {
+    navigator.serviceWorker.register('./sw.js', {scope: 'sw-test'}).then(function(registration) {
       // registration worked
       console.log('Registration succeeded.');
       //button.onclick = function() {
