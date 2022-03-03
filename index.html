@@ -14,18 +14,11 @@
   <meta name="apple-mobile-web-app-title" content="Hello World">
   <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
-  <script src="https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js"></script>
 </head>
 <body class="fullscreen">
   <div class="container">
     <h1 class="title">渐进式网络应用程序 19</h1>
   </div>
   <script src="js/main.js"></script>
-  <script>
-	workbox.routing.registerRoute(
-  		({request}) => request.destination === 'image',
-  		new workbox.strategies.NetworkFirst()
-	);
-  </script>
 </body>
 </html>
