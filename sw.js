@@ -18,10 +18,22 @@ self.addEventListener('install', function(e) {
 });
 
 /* Serve cached content when offline */
+/* cacheFirst strategy */
+/*
 self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
       return response || fetch(e.request);
     })
   );
+});
+*/
+
+/* networkFirst strategy */
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        fetch(event.request).catch(function() {
+            return caches.match(event.request);
+        })
+    );
 });
