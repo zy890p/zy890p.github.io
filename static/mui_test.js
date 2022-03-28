@@ -32,7 +32,7 @@ var theme = createTheme({
   }
 });
 
-var top3 = ['Star War', 'Shark', 'Titanic', 'Iron Man', 'Thor', '長城' ];
+var top3 = ['Star War', 'Shark', 'Titanic', 'Iron Man' ];
 
 function LightBulbIcon(props) {
   return React.createElement(
